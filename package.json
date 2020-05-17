@@ -1,0 +1,25 @@
+{
+  "name": "izyware-dataconsole-messagequeue",
+  "version": "1.0.0",
+  "description": "IzyWare Data Console MessageQueue Feature",
+  "main": "index.js",
+  "scripts": {
+    "consume": "node node_modules/izy-proxy/cli.js call queuelib?consume",
+    "publish": "node node_modules/izy-proxy/cli.js call queuelib?publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izyware/dataconsole-messagequeue"
+  },
+  "dependencies": {
+    "amqplib": "0.5.6",
+    "izy-proxy": "5.0.6"
+  },
+  "keywords": [
+    "izyware",
+    "dataconsole",
+    "messagequeue"
+  ],
+  "author": "Izyware Inc",
+  "license": "MIT"
+}
