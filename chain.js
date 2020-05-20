@@ -61,7 +61,9 @@ const modtask = (chainItem, cb, $chain) => {
         ch.assertQueue(queueName);
         ch.consume(queueName, msg => {
           console.log(msg.fields, msg.content.toString());
-          ch.ack(msg);
+          if (query.ack == 'true') {
+             ch.ack(msg);
+          }
         });
         $chain.set('outcome', { success: true });
         cb();
